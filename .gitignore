@@ -1,0 +1,6 @@
+# ignore everything
+*
+# except for files with solutions and gitignore
+!.gitignore
+!src/int_stack.cpp
+!src/stack_machine.cpp
