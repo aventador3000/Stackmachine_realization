@@ -24,9 +24,9 @@
 //#define MINUS_OP      // variant 1
 //#define MULT_OP       // variant 2
 //#define DIV_OP        // variant 3
-//#define CHOICE_OP     // variant 4
-//#define ASSIGN_OP     // variant 5
-//#define SIG_CHANGE_OP // variant 6
+#define CHOICE_OP     // variant 4
+#define ASSIGN_OP     // variant 5
+#define SIG_CHANGE_OP // variant 6
 //#define INVER_OP      // variant 7
 //#define AND_OP        // variant 8
 //#define OR_OP         // variant 9
@@ -116,18 +116,24 @@ class DivOp : public IOperation {
 #ifdef CHOICE_OP
 class ChoiceOp : public IOperation {
 // TODO Implement virtual methods like in PlusOp class
+    virtual int operation(char op, int a, int b = 0, int c = 0)  override;
+    virtual Arity getArity() const override ;
 };
 #endif
 
 #ifdef ASSIGN_OP
 class AssignOp : public IOperation {
 // TODO Implement virtual methods like in PlusOp class
+    virtual int operation(char op, int a, int b = 0, int c = 0)  override;
+    virtual Arity getArity() const override ;
 };
 #endif
 
 #ifdef SIG_CHANGE_OP
 class SigChangeOp : public IOperation {
 // TODO Implement virtual methods like in PlusOp class
+    virtual int operation(char op, int a, int b = 0, int c = 0)  override;
+    virtual Arity getArity() const override ;
 };
 #endif
 
