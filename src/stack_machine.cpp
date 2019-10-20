@@ -31,7 +31,7 @@ namespace xi
 
 
     int PlusOp::operation(char op, int a, int b,
-                          int c) // < just commented unused argument. This does not affect the code anyhow.
+                          int c) // < just uncommented unused argument. This does not affect the code anyhow.
     {
         if (op != '+')
             throw std::logic_error("Operation other than Plus (+) are not supported");
